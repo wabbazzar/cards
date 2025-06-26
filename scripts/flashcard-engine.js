@@ -14,6 +14,7 @@ class FlashcardEngine {
         this.availableCards = [];
         this.cardStates = new Map(); // Track card learning progress
         this.gameStats = this.initializeStats();
+        this.isPaused = false;
         
         // Timer System
         this.timerDuration = 0; // seconds, 0 = no timer
@@ -54,6 +55,7 @@ class FlashcardEngine {
             levelCompleteOverlay: document.getElementById('levelCompleteOverlay'),
             gameOverOverlay: document.getElementById('gameOverOverlay'),
             victoryOverlay: document.getElementById('victoryOverlay'),
+            pauseOverlay: document.getElementById('pauseOverlay'),
             
             // Dropdowns
             deckSelect: document.getElementById('deckSelect'),
@@ -138,7 +140,17 @@ class FlashcardEngine {
 
         // Keyboard Controls (Desktop Enhancement)
         document.addEventListener('keydown', (e) => {
-            if (this.elements.gameContainer.style.display !== 'none') {
+            // Handle pause/unpause
+            if (e.key === 'p' || e.key === 'P') {
+                e.preventDefault();
+                if (this.elements.gameContainer.style.display !== 'none') {
+                    this.togglePause();
+                }
+                return;
+            }
+            
+            // Handle game controls only if not paused
+            if (this.elements.gameContainer.style.display !== 'none' && !this.isPaused) {
                 const key = e.key;
                 if (key >= '1' && key <= '4') {
                     e.preventDefault();
@@ -155,6 +167,21 @@ class FlashcardEngine {
 
         // Deck Selection Change
         this.elements.deckSelect.addEventListener('change', () => this.updateLevelOptions());
+
+        // Mobile pause/unpause via header tap
+        this.elements.gameContainer.querySelector('.game-header').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (this.elements.gameContainer.style.display !== 'none') {
+                this.togglePause();
+            }
+        });
+
+        // Pause overlay touch/click to resume
+        this.elements.pauseOverlay.addEventListener('click', () => {
+            if (this.isPaused) {
+                this.togglePause();
+            }
+        });
     }
 
     async discoverDecks() {
@@ -309,9 +336,11 @@ class FlashcardEngine {
         this.gameStats = this.initializeStats();
         this.cardStates.clear();
         this.loadLevelCards();
+        this.isPaused = false;
         
         // Show game container
         this.elements.startOverlay.classList.remove('active');
+        this.elements.pauseOverlay.classList.remove('active');
         this.elements.gameContainer.style.display = 'flex';
         
         // Start first question
@@ -396,15 +425,7 @@ class FlashcardEngine {
     startTimer() {
         this.timeRemaining = this.timerDuration;
         this.elements.questionCard.classList.add('timer-active');
-        
-        this.timerInterval = setInterval(() => {
-            this.timeRemaining--;
-            this.updateTimerEffects();
-            
-            if (this.timeRemaining <= 0) {
-                this.handleTimeout();
-            }
-        }, 1000);
+        this.startTimerWithTimeRemaining();
     }
 
     updateTimerEffects() {
@@ -486,8 +507,48 @@ class FlashcardEngine {
         });
     }
 
+    togglePause() {
+        this.isPaused = !this.isPaused;
+        
+        if (this.isPaused) {
+            // Pause game
+            this.pauseTimer();
+            this.elements.pauseOverlay.classList.add('active');
+            console.log('Game paused');
+        } else {
+            // Unpause game
+            this.resumeTimer();
+            this.elements.pauseOverlay.classList.remove('active');
+            console.log('Game unpaused');
+        }
+    }
+
+    pauseTimer() {
+        if (this.timerInterval) {
+            clearInterval(this.timerInterval);
+            this.timerInterval = null;
+        }
+    }
+
+    resumeTimer() {
+        if (this.timerDuration > 0 && this.timeRemaining > 0) {
+            this.startTimerWithTimeRemaining();
+        }
+    }
+
+    startTimerWithTimeRemaining() {
+        this.timerInterval = setInterval(() => {
+            this.timeRemaining--;
+            this.updateTimerEffects();
+            
+            if (this.timeRemaining <= 0) {
+                this.handleTimeout();
+            }
+        }, 1000);
+    }
+
     selectAnswer(answerIndex) {
-        if (this.answerButtons[answerIndex].disabled) return;
+        if (this.answerButtons[answerIndex].disabled || this.isPaused) return;
         
         this.clearTimer();
         
@@ -712,8 +773,10 @@ class FlashcardEngine {
         this.elements.levelCompleteOverlay.classList.remove('active');
         this.elements.gameOverOverlay.classList.remove('active');
         this.elements.victoryOverlay.classList.remove('active');
+        this.elements.pauseOverlay.classList.remove('active');
         this.elements.startOverlay.classList.add('active');
         this.clearTimer();
+        this.isPaused = false;
     }
 
     // Utility Functions

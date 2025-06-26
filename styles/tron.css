@@ -336,6 +336,33 @@ body {
     text-shadow: var(--neon-glow);
 }
 
+.pause-title {
+    color: #ffff00;
+    text-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 60px #ffff00;
+}
+
+.overlay-text {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/* Hide desktop controls on mobile */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* Hide mobile controls on desktop */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
 .app-subtitle {
     font-size: 14px;
     opacity: 0.8;
