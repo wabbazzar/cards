@@ -1,0 +1,1417 @@
+{
+  "metadata": {
+    "deck_name": "Chinese Language Basics",
+    "description": "Essential Chinese language vocabulary and phrases for beginners, covering greetings, daily life, numbers, and basic conversation",
+    "category": "Language Learning",
+    "max_level": 3,
+    "available_levels": [1, 2, 3],
+    "card_count": 44,
+    "difficulty": "beginner_to_intermediate",
+    "tags": ["chinese", "mandarin", "language", "vocabulary", "pronunciation"],
+    "version": "1.0.0",
+    "created_date": "2025-01-22",
+    "last_updated": "2025-01-22"
+  },
+  "cards": [
+    {
+      "id": "hello_greeting",
+      "term": "nǐ hǎo",
+      "definition": "hello, hi (formal greeting)",
+      "difficulty": "beginner",
+      "category": "greetings",
+      "subcategory": "basic_greetings",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zài jiàn",
+        "xiè xie",
+        "duì bù qǐ"
+      ],
+      "explanation": "Most common Chinese greeting, literally means 'you good'",
+      "tags": [
+        "greetings",
+        "basic",
+        "formal"
+      ],
+      "character_counts": {
+        "term": 6,
+        "definition": 25,
+        "avg_wrong_answer": 18
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "thank_you",
+      "term": "xiè xie",
+      "definition": "thank you",
+      "difficulty": "beginner",
+      "category": "greetings",
+      "subcategory": "politeness",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "bù kè qi",
+        "qǐng jìn",
+        "nǐ hǎo"
+      ],
+      "explanation": "Essential polite expression used frequently in daily conversation",
+      "tags": [
+        "greetings",
+        "politeness",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 9,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "goodbye_formal",
+      "term": "zài jiàn",
+      "definition": "goodbye, see you later",
+      "difficulty": "beginner",
+      "category": "greetings",
+      "subcategory": "farewells",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zǎo shàng hǎo",
+        "huān yíng",
+        "xiè xie"
+      ],
+      "explanation": "Common farewell meaning 'again see', used when parting",
+      "tags": [
+        "greetings",
+        "farewell",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 8,
+        "definition": 22,
+        "avg_wrong_answer": 18
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "sorry_apology",
+      "term": "duì bù qǐ",
+      "definition": "sorry, excuse me (apology)",
+      "difficulty": "beginner",
+      "category": "greetings",
+      "subcategory": "politeness",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "fēi cháng gǎn xiè",
+        "bù kè qi",
+        "wǎn shàng hǎo"
+      ],
+      "explanation": "Polite apology used when making mistakes or asking for forgiveness",
+      "tags": [
+        "greetings",
+        "apology",
+        "politeness"
+      ],
+      "character_counts": {
+        "term": 9,
+        "definition": 26,
+        "avg_wrong_answer": 22
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "yes_affirmative",
+      "term": "shì de",
+      "definition": "yes, that's correct",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "basic_responses",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "bù shì",
+        "kě néng",
+        "wǒ bù zhī dào"
+      ],
+      "explanation": "Formal way to confirm or agree with something",
+      "tags": [
+        "daily_life",
+        "responses",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 6,
+        "definition": 19,
+        "avg_wrong_answer": 14
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "no_negative",
+      "term": "bù shì",
+      "definition": "no, not (negative response)",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "basic_responses",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "shì de",
+        "yě xǔ",
+        "wǒ tóng yì"
+      ],
+      "explanation": "Common negative response, literally 'not is'",
+      "tags": [
+        "daily_life",
+        "responses",
+        "negative"
+      ],
+      "character_counts": {
+        "term": 6,
+        "definition": 27,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "number_one",
+      "term": "yī",
+      "definition": "one (1)",
+      "difficulty": "beginner",
+      "category": "numbers",
+      "subcategory": "basic_numbers",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "èr",
+        "shí",
+        "líng"
+      ],
+      "explanation": "First number in Chinese counting system",
+      "tags": [
+        "numbers",
+        "counting",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 7,
+        "avg_wrong_answer": 8
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "number_ten",
+      "term": "shí",
+      "definition": "ten (10)",
+      "difficulty": "beginner",
+      "category": "numbers",
+      "subcategory": "basic_numbers",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "sì",
+        "yī bǎi",
+        "yī qiān"
+      ],
+      "explanation": "Base unit for counting in tens in Chinese",
+      "tags": [
+        "numbers",
+        "counting",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 8,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "i_me",
+      "term": "wǒ",
+      "definition": "I, me",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "pronouns",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "nǐ",
+        "tā",
+        "wǒ men"
+      ],
+      "explanation": "First person singular pronoun",
+      "tags": [
+        "pronouns",
+        "basic",
+        "personal"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 5,
+        "avg_wrong_answer": 12
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "you_singular",
+      "term": "nǐ",
+      "definition": "you (singular)",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "pronouns",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "wǒ",
+        "tā men",
+        "tā"
+      ],
+      "explanation": "Second person singular pronoun",
+      "tags": [
+        "pronouns",
+        "basic",
+        "personal"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 14,
+        "avg_wrong_answer": 9
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "good_adjective",
+      "term": "hǎo",
+      "definition": "good, well",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "adjectives",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "huài",
+        "dà",
+        "xiǎo"
+      ],
+      "explanation": "Common positive adjective used in many contexts",
+      "tags": [
+        "adjectives",
+        "basic",
+        "positive"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 10,
+        "avg_wrong_answer": 10
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "what_question",
+      "term": "shén me",
+      "definition": "what",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "questions",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "shuí",
+        "nǎ lǐ",
+        "shén me shí hou"
+      ],
+      "explanation": "Basic question word for asking about things",
+      "tags": [
+        "questions",
+        "basic",
+        "interrogative"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 4,
+        "avg_wrong_answer": 5
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "name_noun",
+      "term": "míng zi",
+      "definition": "name",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "personal_info",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "nián líng",
+        "dì zhǐ",
+        "diàn huà hào mǎ"
+      ],
+      "explanation": "Used when asking or telling someone's name",
+      "tags": [
+        "personal",
+        "basic",
+        "identity"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 4,
+        "avg_wrong_answer": 9
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "to_be_is",
+      "term": "shì",
+      "definition": "to be, is, am, are",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "verbs",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "yǒu",
+        "qù",
+        "lái"
+      ],
+      "explanation": "Copula verb linking subject and predicate",
+      "tags": [
+        "verbs",
+        "basic",
+        "linking"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 17,
+        "avg_wrong_answer": 14
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "china_country",
+      "term": "zhōng guó",
+      "definition": "China (country)",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "places",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "rì běn",
+        "měi guó",
+        "hán guó"
+      ],
+      "explanation": "Literally means 'middle country' or 'central nation'",
+      "tags": [
+        "places",
+        "countries",
+        "geography"
+      ],
+      "character_counts": {
+        "term": 9,
+        "definition": 15,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "person_classifier",
+      "term": "rén",
+      "definition": "person, people",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "nouns",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "dòng wù",
+        "dōng xī",
+        "dì fāng"
+      ],
+      "explanation": "Basic noun for human being, also used in compounds",
+      "tags": [
+        "nouns",
+        "people",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 14,
+        "avg_wrong_answer": 14
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "big_large",
+      "term": "dà",
+      "definition": "big, large",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "adjectives",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "xiǎo",
+        "cháng",
+        "duǎn"
+      ],
+      "explanation": "Common adjective for size, opposite of xiǎo (small)",
+      "tags": [
+        "adjectives",
+        "size",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 10,
+        "avg_wrong_answer": 12
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "small_little",
+      "term": "xiǎo",
+      "definition": "small, little",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "adjectives",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "dà",
+        "gāo",
+        "kuān"
+      ],
+      "explanation": "Common adjective for size, opposite of dà (big)",
+      "tags": [
+        "adjectives",
+        "size",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 13,
+        "avg_wrong_answer": 10
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "water_drink",
+      "term": "shuǐ",
+      "definition": "water",
+      "difficulty": "beginner",
+      "category": "food",
+      "subcategory": "beverages",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "chá",
+        "kā fēi",
+        "guǒ zhī"
+      ],
+      "explanation": "Basic necessity, also used in many compound words",
+      "tags": [
+        "food",
+        "drinks",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 5,
+        "avg_wrong_answer": 5
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "eat_verb",
+      "term": "chī",
+      "definition": "to eat",
+      "difficulty": "beginner",
+      "category": "food",
+      "subcategory": "actions",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "hē",
+        "zuò fàn",
+        "cháng"
+      ],
+      "explanation": "Basic verb for eating food",
+      "tags": [
+        "verbs",
+        "food",
+        "actions"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 6,
+        "avg_wrong_answer": 8
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "today_time",
+      "term": "jīn tiān",
+      "definition": "today",
+      "difficulty": "beginner",
+      "category": "time",
+      "subcategory": "days",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zuó tiān",
+        "míng tiān",
+        "zhè ge xīng qī"
+      ],
+      "explanation": "Time expression for the current day",
+      "tags": [
+        "time",
+        "days",
+        "present"
+      ],
+      "character_counts": {
+        "term": 8,
+        "definition": 5,
+        "avg_wrong_answer": 9
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "tomorrow_time",
+      "term": "míng tiān",
+      "definition": "tomorrow",
+      "difficulty": "beginner",
+      "category": "time",
+      "subcategory": "days",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zuó tiān",
+        "jīn tiān",
+        "xià ge xīng qī"
+      ],
+      "explanation": "Time expression for the day after today",
+      "tags": [
+        "time",
+        "days",
+        "future"
+      ],
+      "character_counts": {
+        "term": 9,
+        "definition": 8,
+        "avg_wrong_answer": 9
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "friend_noun",
+      "term": "péng yǒu",
+      "definition": "friend",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "relationships",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "dí rén",
+        "mò shēng rén",
+        "tóng shì"
+      ],
+      "explanation": "Common term for friend, literally 'friend friend'",
+      "tags": [
+        "relationships",
+        "people",
+        "social"
+      ],
+      "character_counts": {
+        "term": 8,
+        "definition": 6,
+        "avg_wrong_answer": 9
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "love_verb",
+      "term": "ài",
+      "definition": "to love",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "emotions",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "hèn",
+        "xǐ huān",
+        "xiǎng yào"
+      ],
+      "explanation": "Strong emotion verb, deeper than xǐ huān (like)",
+      "tags": [
+        "emotions",
+        "verbs",
+        "feelings"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 7,
+        "avg_wrong_answer": 7
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "like_enjoy",
+      "term": "xǐ huān",
+      "definition": "to like, enjoy",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "emotions",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "tǎo yàn",
+        "shēn ài",
+        "xū yào"
+      ],
+      "explanation": "Common verb for expressing preference or enjoyment",
+      "tags": [
+        "emotions",
+        "verbs",
+        "preferences"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 14,
+        "avg_wrong_answer": 15
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "family_household",
+      "term": "jiā",
+      "definition": "home, family",
+      "difficulty": "beginner",
+      "category": "family",
+      "subcategory": "household",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "xué xiào",
+        "bàn gōng shì",
+        "shāng diàn"
+      ],
+      "explanation": "Can mean both physical home and family unit",
+      "tags": [
+        "family",
+        "home",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 12,
+        "avg_wrong_answer": 14
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "mother_mom",
+      "term": "mā ma",
+      "definition": "mother, mom",
+      "difficulty": "beginner",
+      "category": "family",
+      "subcategory": "parents",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "bà ba",
+        "jiě jie",
+        "nǎi nai"
+      ],
+      "explanation": "Informal term for mother, repeated 'ma' sound",
+      "tags": [
+        "family",
+        "parents",
+        "informal"
+      ],
+      "character_counts": {
+        "term": 5,
+        "definition": 11,
+        "avg_wrong_answer": 10
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "father_dad",
+      "term": "bà ba",
+      "definition": "father, dad",
+      "difficulty": "beginner",
+      "category": "family",
+      "subcategory": "parents",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "mā ma",
+        "gē ge",
+        "yé ye"
+      ],
+      "explanation": "Informal term for father, repeated 'ba' sound",
+      "tags": [
+        "family",
+        "parents",
+        "informal"
+      ],
+      "character_counts": {
+        "term": 5,
+        "definition": 11,
+        "avg_wrong_answer": 10
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "teacher_profession",
+      "term": "lǎo shī",
+      "definition": "teacher",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "professions",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "xué shēng",
+        "yī shēng",
+        "sī jī"
+      ],
+      "explanation": "Respectful term for teacher, literally 'old master'",
+      "tags": [
+        "professions",
+        "education",
+        "respect"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 7,
+        "avg_wrong_answer": 15
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "student_learner",
+      "term": "xué sheng",
+      "definition": "student",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "education",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "lǎo shī",
+        "gōng rén",
+        "jīng lǐ"
+      ],
+      "explanation": "Person who studies, literally 'study/learn life'",
+      "tags": [
+        "education",
+        "school",
+        "learning"
+      ],
+      "character_counts": {
+        "term": 9,
+        "definition": 7,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "money_currency",
+      "term": "qián",
+      "definition": "money",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "finance",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "xìn yòng kǎ",
+        "yín háng zhàng hù",
+        "qián bāo"
+      ],
+      "explanation": "General term for money or currency",
+      "tags": [
+        "money",
+        "finance",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 5,
+        "avg_wrong_answer": 11
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "how_much_price",
+      "term": "duō shǎo qián",
+      "definition": "how much (money)?",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "shopping",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zài nǎ lǐ",
+        "jǐ diǎn",
+        "nà shì shuí"
+      ],
+      "explanation": "Common phrase for asking price when shopping",
+      "tags": [
+        "shopping",
+        "questions",
+        "money"
+      ],
+      "character_counts": {
+        "term": 13,
+        "definition": 17,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "expensive_costly",
+      "term": "guì",
+      "definition": "expensive",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "shopping",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "pián yi",
+        "miǎn fèi",
+        "zhēn guì"
+      ],
+      "explanation": "Adjective describing high price",
+      "tags": [
+        "shopping",
+        "adjectives",
+        "price"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 9,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "cheap_inexpensive",
+      "term": "pián yi",
+      "definition": "cheap, inexpensive",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "shopping",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "guì",
+        "zhōng děng jià gé",
+        "dǎ zhé"
+      ],
+      "explanation": "Adjective describing low price, opposite of guì",
+      "tags": [
+        "shopping",
+        "adjectives",
+        "price"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 18,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "want_need",
+      "term": "yào",
+      "definition": "to want, need",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "verbs",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "yǒu",
+        "gěi",
+        "mǎi"
+      ],
+      "explanation": "Modal verb expressing desire or necessity",
+      "tags": [
+        "verbs",
+        "modal",
+        "desire"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 13,
+        "avg_wrong_answer": 14
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "have_exist",
+      "term": "yǒu",
+      "definition": "to have, there is/are",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "verbs",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "xiǎng yào",
+        "shì",
+        "gěi"
+      ],
+      "explanation": "Verb for possession and existence",
+      "tags": [
+        "verbs",
+        "possession",
+        "existence"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 21,
+        "avg_wrong_answer": 15
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "dont_have",
+      "term": "méi yǒu",
+      "definition": "don't have, there isn't",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "verbs",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "yǒu",
+        "xiǎng yǒu",
+        "céng jīng yǒu"
+      ],
+      "explanation": "Negative form of yǒu, very common expression",
+      "tags": [
+        "verbs",
+        "negative",
+        "possession"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 23,
+        "avg_wrong_answer": 12
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "where_location",
+      "term": "nǎ lǐ",
+      "definition": "where",
+      "difficulty": "beginner",
+      "category": "directions",
+      "subcategory": "questions",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "zhè lǐ",
+        "nà lǐ",
+        "suǒ yǒu dì fāng"
+      ],
+      "explanation": "Question word for asking location",
+      "tags": [
+        "questions",
+        "location",
+        "directions"
+      ],
+      "character_counts": {
+        "term": 5,
+        "definition": 5,
+        "avg_wrong_answer": 7
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "here_this_place",
+      "term": "zhè lǐ",
+      "definition": "here, this place",
+      "difficulty": "beginner",
+      "category": "directions",
+      "subcategory": "locations",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "nà lǐ",
+        "nǎ lǐ",
+        "dào chù"
+      ],
+      "explanation": "Indicates current or nearby location",
+      "tags": [
+        "location",
+        "demonstrative",
+        "place"
+      ],
+      "character_counts": {
+        "term": 6,
+        "definition": 16,
+        "avg_wrong_answer": 19
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "go_walk",
+      "term": "qù",
+      "definition": "to go",
+      "difficulty": "beginner",
+      "category": "directions",
+      "subcategory": "movement",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "lái",
+        "liú",
+        "huí"
+      ],
+      "explanation": "Basic verb for movement away from speaker",
+      "tags": [
+        "movement",
+        "verbs",
+        "direction"
+      ],
+      "character_counts": {
+        "term": 2,
+        "definition": 5,
+        "avg_wrong_answer": 8
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "come_arrive",
+      "term": "lái",
+      "definition": "to come",
+      "difficulty": "beginner",
+      "category": "directions",
+      "subcategory": "movement",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "qù",
+        "lí kāi",
+        "dāi"
+      ],
+      "explanation": "Basic verb for movement toward speaker",
+      "tags": [
+        "movement",
+        "verbs",
+        "direction"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 7,
+        "avg_wrong_answer": 7
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "red_color",
+      "term": "hóng sè",
+      "definition": "red (color)",
+      "difficulty": "beginner",
+      "category": "colors",
+      "subcategory": "basic_colors",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "lán sè",
+        "lǜ sè",
+        "huáng sè"
+      ],
+      "explanation": "Lucky color in Chinese culture",
+      "tags": [
+        "colors",
+        "culture",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 11,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "white_color",
+      "term": "bái sè",
+      "definition": "white (color)",
+      "difficulty": "beginner",
+      "category": "colors",
+      "subcategory": "basic_colors",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "hēi sè",
+        "huī sè",
+        "zōng sè"
+      ],
+      "explanation": "Basic color, associated with mourning in traditional culture",
+      "tags": [
+        "colors",
+        "basic",
+        "culture"
+      ],
+      "character_counts": {
+        "term": 6,
+        "definition": 13,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "can_able",
+      "term": "néng",
+      "definition": "can, to be able to",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "modal_verbs",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "bì xū",
+        "yīng gāi",
+        "xiǎng yào"
+      ],
+      "explanation": "Modal verb expressing ability or possibility",
+      "tags": [
+        "modal",
+        "ability",
+        "verbs"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 18,
+        "avg_wrong_answer": 15
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "speak_say",
+      "term": "shuō",
+      "definition": "to speak, say",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "communication",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "tīng",
+        "kàn",
+        "xiě"
+      ],
+      "explanation": "Basic verb for verbal communication",
+      "tags": [
+        "communication",
+        "verbs",
+        "speaking"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 13,
+        "avg_wrong_answer": 15
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "chinese_language",
+      "term": "zhōng wén",
+      "definition": "Chinese language",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "languages",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "yīng wén",
+        "rì wén",
+        "hán wén"
+      ],
+      "explanation": "The Chinese language, literally 'middle writing'",
+      "tags": [
+        "language",
+        "communication",
+        "culture"
+      ],
+      "character_counts": {
+        "term": 9,
+        "definition": 16,
+        "avg_wrong_answer": 16
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "understand_comprehend",
+      "term": "dǒng",
+      "definition": "to understand",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "cognition",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "wàng",
+        "jì",
+        "hú tú"
+      ],
+      "explanation": "Verb for comprehension, often used as 'tīng dǒng' (understand by listening)",
+      "tags": [
+        "cognition",
+        "understanding",
+        "verbs"
+      ],
+      "character_counts": {
+        "term": 4,
+        "definition": 13,
+        "avg_wrong_answer": 10
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "very_quite",
+      "term": "hěn",
+      "definition": "very, quite",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "adverbs",
+      "progression_level": 1,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "bù",
+        "yě xǔ",
+        "yǒu diǎn"
+      ],
+      "explanation": "Common intensifier adverb used before adjectives",
+      "tags": [
+        "adverbs",
+        "intensifiers",
+        "basic"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 11,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "too_excessive",
+      "term": "tài",
+      "definition": "too, excessively",
+      "difficulty": "intermediate",
+      "category": "daily_life",
+      "subcategory": "adverbs",
+      "progression_level": 3,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "hěn",
+        "bù gòu",
+        "gāng hǎo"
+      ],
+      "explanation": "Adverb indicating excess, often paired with 'le'",
+      "tags": [
+        "adverbs",
+        "excess",
+        "degree"
+      ],
+      "character_counts": {
+        "term": 3,
+        "definition": 16,
+        "avg_wrong_answer": 11
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    },
+    {
+      "id": "happy_joyful",
+      "term": "kuài lè",
+      "definition": "happy, joyful",
+      "difficulty": "beginner",
+      "category": "daily_life",
+      "subcategory": "emotions",
+      "progression_level": 2,
+      "mastery_threshold": 3,
+      "wrong_answers": [
+        "nán guò",
+        "shēng qì",
+        "dān xīn"
+      ],
+      "explanation": "Common emotion adjective, used in birthday wishes",
+      "tags": [
+        "emotions",
+        "adjectives",
+        "positive"
+      ],
+      "character_counts": {
+        "term": 7,
+        "definition": 13,
+        "avg_wrong_answer": 13
+      },
+      "created_date": "2025-01-22",
+      "last_updated": "2025-01-22"
+    }
+  ]
+}

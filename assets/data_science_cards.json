@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "deck_name": "Data Science Fundamentals",
+        "description": "Essential data science concepts and terminology for beginners and intermediate learners",
+        "category": "Technology",
+        "max_level": 2,
+        "available_levels": [1, 2],
+        "card_count": 10,
+        "difficulty": "beginner_to_intermediate",
+        "tags": ["data_science", "machine_learning", "statistics", "technology"],
+        "version": "1.0.0",
+        "created_date": "2025-01-22",
+        "last_updated": "2025-01-22"
+    },
+    "cards": [
+        {
+            "id": 1,
+            "term": "Machine Learning",
+            "definition": "A type of artificial intelligence where computers learn patterns from data",
+            "wrong_answers": ["Data Mining", "Statistical Analysis", "Computer Vision"],
+            "progression_level": 1
+        },
+        {
+            "id": 2,
+            "term": "Data Mining",
+            "definition": "The process of discovering patterns in large data sets",
+            "wrong_answers": ["Machine Learning", "Data Cleaning", "Data Visualization"],
+            "progression_level": 1
+        },
+        {
+            "id": 3,
+            "term": "Regression",
+            "definition": "A statistical method for modeling relationships between variables",
+            "wrong_answers": ["Classification", "Clustering", "Association"],
+            "progression_level": 1
+        },
+        {
+            "id": 4,
+            "term": "Classification",
+            "definition": "A machine learning task that assigns categories to data points",
+            "wrong_answers": ["Regression", "Clustering", "Dimensionality Reduction"],
+            "progression_level": 1
+        },
+        {
+            "id": 5,
+            "term": "Clustering",
+            "definition": "An unsupervised learning method that groups similar data points",
+            "wrong_answers": ["Classification", "Regression", "Association Rules"],
+            "progression_level": 1
+        },
+        {
+            "id": 6,
+            "term": "Neural Network",
+            "definition": "A computing system inspired by biological neural networks",
+            "wrong_answers": ["Decision Tree", "Random Forest", "Support Vector Machine"],
+            "progression_level": 2
+        },
+        {
+            "id": 7,
+            "term": "Deep Learning",
+            "definition": "Machine learning using neural networks with multiple layers",
+            "wrong_answers": ["Shallow Learning", "Surface Learning", "Basic Learning"],
+            "progression_level": 2
+        },
+        {
+            "id": 8,
+            "term": "Overfitting",
+            "definition": "When a model learns training data too well and fails on new data",
+            "wrong_answers": ["Underfitting", "Perfect Fitting", "Cross Fitting"],
+            "progression_level": 2
+        },
+        {
+            "id": 9,
+            "term": "Cross Validation",
+            "definition": "A technique for assessing model performance on unseen data",
+            "wrong_answers": ["Single Validation", "Double Validation", "Triple Validation"],
+            "progression_level": 2
+        },
+        {
+            "id": 10,
+            "term": "Feature Engineering",
+            "definition": "The process of selecting and transforming variables for machine learning",
+            "wrong_answers": ["Data Engineering", "Model Engineering", "System Engineering"],
+            "progression_level": 2
+        }
+    ]
+} 

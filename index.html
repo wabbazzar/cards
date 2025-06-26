@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Flashcard Reader - Tron Learning Experience</title>
+    <link rel="stylesheet" href="styles/tron.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Screen Overlay -->
+    <div class="game-overlay active" id="startOverlay">
+        <div class="overlay-content">
+            <h1 class="app-title">Flashcard Reader</h1>
+            <p class="app-subtitle">Master Knowledge Through Practice</p>
+            
+            <!-- Deck Selection -->
+            <div class="selection-group">
+                <label class="selection-label">Select Learning Deck:</label>
+                <select id="deckSelect" class="neon-dropdown">
+                    <option value="">Loading decks...</option>
+                </select>
+            </div>
+            
+            <!-- Starting Level Selection -->
+            <div class="selection-group">
+                <label class="selection-label">Starting Level:</label>
+                <select id="levelSelect" class="neon-dropdown">
+                    <option value="1">Level 1</option>
+                </select>
+            </div>
+            
+            <!-- Timer Selection -->
+            <div class="selection-group">
+                <label class="selection-label">Timer Per Question:</label>
+                <select id="timerSelect" class="neon-dropdown">
+                    <option value="none">No Timer</option>
+                    <option value="5">5 Seconds</option>
+                    <option value="10">10 Seconds</option>
+                    <option value="20">20 Seconds</option>
+                </select>
+            </div>
+            
+            <button class="start-button neon-button" id="startLearning">Start Learning</button>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <!-- Mobile Stats Header -->
+        <header class="game-header mobile-stats">
+            <div class="lives-display">
+                <span class="stat-label">Lives:</span>
+                <div class="hearts-container" id="heartsContainer">
+                    ❤️❤️❤️❤️❤️
+                </div>
+            </div>
+            <div class="score-display">
+                <span class="stat-label">Score:</span> 
+                <span id="currentScore">0</span>
+                <span class="streak-display">Streak: <span id="currentStreak">0</span></span>
+            </div>
+            <div class="progress-display">
+                <span class="stat-label">Level <span id="currentLevel">1</span>:</span>
+                <span id="cardProgress">0/5</span> mastered
+                <span class="accuracy-display">(<span id="currentAccuracy">0%</span>)</span>
+            </div>
+        </header>
+
+        <!-- Question Container with Timer -->
+        <div class="question-container">
+            <div class="question-card" id="questionCard">
+                <h2 class="question-text" id="questionText">A type of artificial intelligence where computers learn patterns from data</h2>
+            </div>
+        </div>
+
+        <!-- 2x2 Answer Grid with Cross Dividers -->
+        <div class="answers-grid" id="answersGrid">
+            <button class="answer-option touch-target" data-answer="0" id="answer0">
+                <span class="answer-text">Machine Learning</span>
+            </button>
+            <button class="answer-option touch-target" data-answer="1" id="answer1">
+                <span class="answer-text">Data Mining</span>
+            </button>
+            <button class="answer-option touch-target" data-answer="2" id="answer2">
+                <span class="answer-text">Computer Vision</span>
+            </button>
+            <button class="answer-option touch-target" data-answer="3" id="answer3">
+                <span class="answer-text">Statistical Analysis</span>
+            </button>
+            <!-- Cross/Plus Dividers -->
+            <div class="grid-divider horizontal"></div>
+            <div class="grid-divider vertical"></div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="levelProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level Complete Overlay -->
+    <div class="game-overlay" id="levelCompleteOverlay">
+        <div class="overlay-content">
+            <h1 class="level-complete-title">LEVEL <span id="completedLevel">1</span> COMPLETE!</h1>
+            <div class="level-stats">
+                <p class="stat-item">Cards Mastered: <span id="levelCards">5</span></p>
+                <p class="stat-item">Accuracy: <span id="levelAccuracy">85%</span></p>
+                <p class="stat-item">Time: <span id="levelTime">2:34</span></p>
+            </div>
+            <div class="next-level-preview">
+                <p class="next-level-text">Unlocking Level <span id="nextLevel">2</span>...</p>
+                <div class="unlock-progress">
+                    <div class="unlock-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="level-complete-particles"></div>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div class="game-overlay" id="gameOverOverlay">
+        <div class="overlay-content">
+            <h1 class="overlay-title">Learning Session Complete</h1>
+            <div class="final-stats">
+                <div class="stat-group primary-stats">
+                    <p class="stat-item">Final Score: <span id="finalScore">0</span></p>
+                    <p class="stat-item">Level Reached: <span id="finalLevel">1</span></p>
+                    <p class="stat-item">Cards Mastered: <span id="finalCards">0</span></p>
+                </div>
+                <div class="stat-group detailed-stats">
+                    <p class="stat-item">Accuracy Rate: <span id="finalAccuracy">0%</span></p>
+                    <p class="stat-item">Session Time: <span id="sessionTime">0:00</span></p>
+                    <p class="stat-item">Total Attempts: <span id="totalAttempts">0</span></p>
+                    <p class="stat-item">Longest Streak: <span id="longestStreak">0</span></p>
+                </div>
+            </div>
+            <div class="end-options">
+                <button class="restart-button neon-button" id="restartLevel">Continue This Level</button>
+                <button class="restart-button neon-button" id="restartGame">Start Over</button>
+                <button class="menu-button neon-button" id="backToMenu">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Overlay -->
+    <div class="game-overlay" id="victoryOverlay">
+        <div class="overlay-content">
+            <h1 class="victory-title">Deck Mastered!</h1>
+            <div class="victory-celebration">
+                <div class="achievement-badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-text">PERFECT COMPLETION</div>
+                </div>
+            </div>
+            <div class="victory-stats">
+                <div class="stat-group mastery-stats">
+                    <p class="stat-item highlight">Perfect Score: <span id="victoryScore">0</span></p>
+                    <p class="stat-item highlight">Total Cards: <span id="totalCards">0</span></p>
+                    <p class="stat-item highlight">Final Accuracy: <span id="victoryAccuracy">100%</span></p>
+                    <p class="stat-item highlight">Completion Time: <span id="completionTime">0:00</span></p>
+                </div>
+            </div>
+            <div class="victory-options">
+                <button class="menu-button neon-button" id="selectNewDeck">Try Another Deck</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/flashcard-engine.js"></script>
+</body>
+</html> 

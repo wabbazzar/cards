@@ -1,0 +1,682 @@
+{
+    "metadata": {
+        "deck_name": "Data Science Advanced",
+        "description": "Essential data science concepts covering statistics, machine learning, probability, and programming fundamentals",
+        "category": "Technology",
+        "max_level": 10,
+        "available_levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "card_count": 95,
+        "difficulty": "beginner_to_intermediate",
+        "tags": ["data_science", "machine_learning", "statistics", "probability", "programming", "technology"],
+        "version": "1.0.0",
+        "created_date": "2025-01-22",
+        "last_updated": "2025-01-22"
+    },
+    "cards": [
+        {
+            "id": 1,
+            "term": "Mean",
+            "definition": "The sum of all values divided by the number of values (sum(x_i)/N)",
+            "wrong_answers": ["Median", "Mode", "Range"],
+            "progression_level": 1
+        },
+        {
+            "id": 2,
+            "term": "Median",
+            "definition": "The center datapoint of rank ordered data (average if there is a tie for center)",
+            "wrong_answers": ["Mean", "Mode", "Variance"],
+            "progression_level": 1
+        },
+        {
+            "id": 3,
+            "term": "Mode",
+            "definition": "The value that appears most frequently in a dataset",
+            "wrong_answers": ["Mean", "Median", "Standard deviation"],
+            "progression_level": 1
+        },
+        {
+            "id": 4,
+            "term": "Standard Deviation",
+            "definition": "A measure of spread calculated as the square root of the variance",
+            "wrong_answers": ["Mean", "Range", "Median"],
+            "progression_level": 2
+        },
+        {
+            "id": 5,
+            "term": "Variance",
+            "definition": "The expected squared distance of each value from the mean (std²)",
+            "wrong_answers": ["Standard deviation", "Range", "Mean"],
+            "progression_level": 2
+        },
+        {
+            "id": 6,
+            "term": "Range",
+            "definition": "The difference between the maximum and minimum values in a dataset",
+            "wrong_answers": ["Variance", "Standard deviation", "Median"],
+            "progression_level": 1
+        },
+        {
+            "id": 7,
+            "term": "Bayes Theorem",
+            "definition": "Provides a model for investigating beliefs: P(A|B) = P(B|A) × P(A) / P(B)",
+            "wrong_answers": ["Central limit theorem", "Law of large numbers", "Jensen's inequality"],
+            "progression_level": 8
+        },
+        {
+            "id": 8,
+            "term": "PDF",
+            "definition": "Probability density function that describes the infinitesimal probability of any given value",
+            "wrong_answers": ["CDF", "PMF", "MGF"],
+            "progression_level": 3
+        },
+        {
+            "id": 9,
+            "term": "CDF",
+            "definition": "Cumulative distribution function that evaluates probability of value ≤ some threshold",
+            "wrong_answers": ["PDF", "PMF", "Joint distribution"],
+            "progression_level": 3
+        },
+        {
+            "id": 10,
+            "term": "Normal Distribution",
+            "definition": "Bell-shaped distribution where mean, mode, and median are equal",
+            "wrong_answers": ["Uniform distribution", "Exponential distribution", "Binomial distribution"],
+            "progression_level": 3
+        },
+        {
+            "id": 11,
+            "term": "Binomial Distribution",
+            "definition": "Distribution for number of successes in a fixed number of independent trials",
+            "wrong_answers": ["Poisson distribution", "Normal distribution", "Geometric distribution"],
+            "progression_level": 4
+        },
+        {
+            "id": 12,
+            "term": "Poisson Distribution",
+            "definition": "Describes probability of independent, discrete events occurring within a designated time",
+            "wrong_answers": ["Binomial distribution", "Geometric distribution", "Exponential distribution"],
+            "progression_level": 4
+        },
+        {
+            "id": 13,
+            "term": "Central Limit Theorem",
+            "definition": "Sample means from any distribution approach normal distribution as sample size increases (n > 30)",
+            "wrong_answers": ["Law of large numbers", "Bayes theorem", "Jensen's inequality"],
+            "progression_level": 8
+        },
+        {
+            "id": 14,
+            "term": "Null Hypothesis",
+            "definition": "The hypothesis being tested, typically stating no effect or no difference exists",
+            "wrong_answers": ["Alternative hypothesis", "Confidence interval", "Test statistic"],
+            "progression_level": 3
+        },
+        {
+            "id": 15,
+            "term": "Type 1 Error",
+            "definition": "False positive - rejecting the null hypothesis when it is actually true",
+            "wrong_answers": ["Type 2 error", "Power", "Confidence level"],
+            "progression_level": 4
+        },
+        {
+            "id": 16,
+            "term": "Type 2 Error",
+            "definition": "False negative - failing to reject the null hypothesis when it is false",
+            "wrong_answers": ["Type 1 error", "Power", "Significance level"],
+            "progression_level": 4
+        },
+        {
+            "id": 17,
+            "term": "p-value",
+            "definition": "The probability that the observed data occurred under the null hypothesis",
+            "wrong_answers": ["Confidence level", "Power", "Test statistic"],
+            "progression_level": 3
+        },
+        {
+            "id": 18,
+            "term": "Simple Linear Regression",
+            "definition": "Predicts a quantitative response Y to a single input variable X by minimizing RSS",
+            "wrong_answers": ["Multiple regression", "Logistic regression", "Polynomial regression"],
+            "progression_level": 4
+        },
+        {
+            "id": 19,
+            "term": "RSS",
+            "definition": "Residual sum of squares: sum of squared differences between predicted and actual values",
+            "wrong_answers": ["MSE", "MAE", "R-squared"],
+            "progression_level": 4
+        },
+        {
+            "id": 20,
+            "term": "ARIMA",
+            "definition": "Autoregressive Integrated Moving Average - a time series forecasting model",
+            "wrong_answers": ["ARMA", "VAR", "Moving average"],
+            "progression_level": 8
+        },
+        {
+            "id": 21,
+            "term": "Autocorrelation",
+            "definition": "The similarity between observations as a function of the time lag between them",
+            "wrong_answers": ["Cross-correlation", "Partial correlation", "Spurious correlation"],
+            "progression_level": 10
+        },
+        {
+            "id": 22,
+            "term": "Seasonality",
+            "definition": "Periodic fluctuations in time series data that repeat at regular intervals",
+            "wrong_answers": ["Trend", "Noise", "Cyclical patterns"],
+            "progression_level": 4
+        },
+        {
+            "id": 23,
+            "term": "Supervised Learning",
+            "definition": "Learning with labeled data where we have both features and target values",
+            "wrong_answers": ["Unsupervised learning", "Reinforcement learning", "Semi-supervised learning"],
+            "progression_level": 4
+        },
+        {
+            "id": 24,
+            "term": "Unsupervised Learning",
+            "definition": "Learning from data without target labels, making estimation more difficult",
+            "wrong_answers": ["Supervised learning", "Reinforcement learning", "Transfer learning"],
+            "progression_level": 4
+        },
+        {
+            "id": 25,
+            "term": "Bias",
+            "definition": "The expected error created by using a model to approximate a real-world function",
+            "wrong_answers": ["Variance", "Overfitting", "Underfitting"],
+            "progression_level": 6
+        },
+        {
+            "id": 26,
+            "term": "Variance",
+            "definition": "How much predictions vary on different realizations of the model",
+            "wrong_answers": ["Bias", "Irreducible error", "Model complexity"],
+            "progression_level": 6
+        },
+        {
+            "id": 27,
+            "term": "Overfitting",
+            "definition": "When a model learns the training data too well and performs poorly on new data",
+            "wrong_answers": ["Underfitting", "Bias", "Regularization"],
+            "progression_level": 6
+        },
+        {
+            "id": 28,
+            "term": "Cross Validation",
+            "definition": "Technique to assess model performance by splitting data into k folds for training and testing",
+            "wrong_answers": ["Bootstrap", "Hold-out validation", "Leave-one-out"],
+            "progression_level": 5
+        },
+        {
+            "id": 29,
+            "term": "Logistic Regression",
+            "definition": "Classification method using logistic function: p(x) = exp(b0+b1X) / (1 + exp(b0+b1X))",
+            "wrong_answers": ["Linear regression", "Ridge regression", "Lasso regression"],
+            "progression_level": 5
+        },
+        {
+            "id": 30,
+            "term": "Confusion Matrix",
+            "definition": "Table comparing true and predicted classes to visualize classifier accuracy",
+            "wrong_answers": ["Correlation matrix", "Covariance matrix", "Contingency table"],
+            "progression_level": 5
+        },
+        {
+            "id": 31,
+            "term": "Precision",
+            "definition": "True positives divided by total predicted positives (TP / (TP + FP))",
+            "wrong_answers": ["Recall", "F1-score", "Accuracy"],
+            "progression_level": 5
+        },
+        {
+            "id": 32,
+            "term": "Recall",
+            "definition": "True positives divided by total actual positives (TP / (TP + FN))",
+            "wrong_answers": ["Precision", "Specificity", "F1-score"],
+            "progression_level": 5
+        },
+        {
+            "id": 33,
+            "term": "F1 Score",
+            "definition": "Harmonic mean of precision and recall: 2 × (precision × recall) / (precision + recall)",
+            "wrong_answers": ["Accuracy", "AUC", "Precision"],
+            "progression_level": 5
+        },
+        {
+            "id": 34,
+            "term": "Bagging",
+            "definition": "Bootstrap aggregation - ensemble method using multiple models on bootstrap samples",
+            "wrong_answers": ["Boosting", "Stacking", "Voting"],
+            "progression_level": 7
+        },
+        {
+            "id": 35,
+            "term": "Boosting",
+            "definition": "Ensemble strategy training weak models sequentially, each correcting previous errors",
+            "wrong_answers": ["Bagging", "Random forest", "Stacking"],
+            "progression_level": 7
+        },
+        {
+            "id": 36,
+            "term": "Random Forest",
+            "definition": "Ensemble of decision trees using random samples of observations and features",
+            "wrong_answers": ["Decision tree", "Gradient boosting", "SVM"],
+            "progression_level": 6
+        },
+        {
+            "id": 37,
+            "term": "K-means Clustering",
+            "definition": "Unsupervised algorithm grouping data into k clusters by minimizing within-cluster distances",
+            "wrong_answers": ["Hierarchical clustering", "DBSCAN", "Gaussian mixture"],
+            "progression_level": 6
+        },
+        {
+            "id": 38,
+            "term": "SVM",
+            "definition": "Support Vector Machine - finds hyperplane that maximally separates classes",
+            "wrong_answers": ["KNN", "Naive Bayes", "Random forest"],
+            "progression_level": 7
+        },
+        {
+            "id": 39,
+            "term": "KNN",
+            "definition": "K-Nearest Neighbors - classifies based on majority vote of k closest data points",
+            "wrong_answers": ["SVM", "Naive Bayes", "Decision tree"],
+            "progression_level": 5
+        },
+        {
+            "id": 40,
+            "term": "Regularization",
+            "definition": "Techniques to improve generalizability by penalizing model complexity",
+            "wrong_answers": ["Normalization", "Standardization", "Feature selection"],
+            "progression_level": 7
+        },
+        {
+            "id": 41,
+            "term": "L1 Regularization",
+            "definition": "Lasso - adds penalty equal to sum of absolute values of coefficients",
+            "wrong_answers": ["L2 regularization", "Ridge regression", "Elastic net"],
+            "progression_level": 7
+        },
+        {
+            "id": 42,
+            "term": "L2 Regularization",
+            "definition": "Ridge - adds penalty equal to sum of squared coefficients",
+            "wrong_answers": ["L1 regularization", "Lasso", "Elastic net"],
+            "progression_level": 7
+        },
+        {
+            "id": 43,
+            "term": "Feature Engineering",
+            "definition": "Creating new features from existing data to improve model performance",
+            "wrong_answers": ["Feature selection", "Dimensionality reduction", "Data cleaning"],
+            "progression_level": 6
+        },
+        {
+            "id": 44,
+            "term": "PCA",
+            "definition": "Principal Component Analysis - finds low-dimensional representation capturing maximum variance",
+            "wrong_answers": ["LDA", "ICA", "Factor analysis"],
+            "progression_level": 7
+        },
+        {
+            "id": 45,
+            "term": "Gradient Descent",
+            "definition": "Optimization algorithm that iteratively moves toward minimum by following negative gradient",
+            "wrong_answers": ["Newton's method", "Coordinate descent", "Genetic algorithm"],
+            "progression_level": 8
+        },
+        {
+            "id": 46,
+            "term": "MSE",
+            "definition": "Mean Squared Error - average of squared differences between predicted and actual values",
+            "wrong_answers": ["MAE", "RMSE", "R-squared"],
+            "progression_level": 6
+        },
+        {
+            "id": 47,
+            "term": "MAE",
+            "definition": "Mean Absolute Error - average of absolute differences between predicted and actual values",
+            "wrong_answers": ["MSE", "RMSE", "MAPE"],
+            "progression_level": 6
+        },
+        {
+            "id": 48,
+            "term": "Cross-entropy Loss",
+            "definition": "Loss function for classification: -Σ(yi × log(ŷi) + (1-yi) × log(1-ŷi))",
+            "wrong_answers": ["Hinge loss", "MSE", "MAE"],
+            "progression_level": 9
+        },
+        {
+            "id": 49,
+            "term": "Curse of Dimensionality",
+            "definition": "Problems arising when analyzing data in high-dimensional spaces",
+            "wrong_answers": ["Blessing of dimensionality", "Feature explosion", "Data sparsity"],
+            "progression_level": 8
+        },
+        {
+            "id": 50,
+            "term": "Multicollinearity",
+            "definition": "When predictor variables are highly correlated, reducing estimation accuracy",
+            "wrong_answers": ["Heteroscedasticity", "Autocorrelation", "Outliers"],
+            "progression_level": 8
+        },
+        {
+            "id": 51,
+            "term": "Heteroscedasticity",
+            "definition": "Non-constant variance of error terms across observations",
+            "wrong_answers": ["Homoscedasticity", "Multicollinearity", "Autocorrelation"],
+            "progression_level": 8
+        },
+        {
+            "id": 52,
+            "term": "Neural Network",
+            "definition": "Computing system inspired by biological neural networks for machine learning",
+            "wrong_answers": ["Decision tree", "Linear regression", "SVM"],
+            "progression_level": 9
+        },
+        {
+            "id": 53,
+            "term": "Backpropagation",
+            "definition": "Learning algorithm for neural networks that modifies weights based on error gradients",
+            "wrong_answers": ["Forward propagation", "Gradient descent", "Chain rule"],
+            "progression_level": 9
+        },
+        {
+            "id": 54,
+            "term": "Activation Function",
+            "definition": "Function that determines the output of a neural network node",
+            "wrong_answers": ["Loss function", "Objective function", "Cost function"],
+            "progression_level": 9
+        },
+        {
+            "id": 55,
+            "term": "ReLU",
+            "definition": "Rectified Linear Unit activation function: max(0, x)",
+            "wrong_answers": ["Sigmoid", "Tanh", "Softmax"],
+            "progression_level": 9
+        },
+        {
+            "id": 56,
+            "term": "Dropout",
+            "definition": "Regularization technique that randomly sets some neurons to zero during training",
+            "wrong_answers": ["Batch normalization", "Early stopping", "Weight decay"],
+            "progression_level": 9
+        },
+        {
+            "id": 57,
+            "term": "CNN",
+            "definition": "Convolutional Neural Network - deep learning architecture for processing grid-like data",
+            "wrong_answers": ["RNN", "LSTM", "GAN"],
+            "progression_level": 9
+        },
+        {
+            "id": 58,
+            "term": "RNN",
+            "definition": "Recurrent Neural Network - processes sequential data with memory of previous inputs",
+            "wrong_answers": ["CNN", "LSTM", "Transformer"],
+            "progression_level": 9
+        },
+        {
+            "id": 59,
+            "term": "LSTM",
+            "definition": "Long Short-Term Memory - RNN variant that can learn long-term dependencies",
+            "wrong_answers": ["GRU", "RNN", "CNN"],
+            "progression_level": 10
+        },
+        {
+            "id": 60,
+            "term": "Transfer Learning",
+            "definition": "Using pretrained model weights as starting point for new but related task",
+            "wrong_answers": ["Multi-task learning", "Meta-learning", "Few-shot learning"],
+            "progression_level": 9
+        },
+        {
+            "id": 61,
+            "term": "Bag of Words",
+            "definition": "Text representation where each document is vector of word counts",
+            "wrong_answers": ["TF-IDF", "Word embeddings", "N-grams"],
+            "progression_level": 10
+        },
+        {
+            "id": 62,
+            "term": "Stemming",
+            "definition": "Reducing words to their root form by removing suffixes",
+            "wrong_answers": ["Lemmatization", "Tokenization", "Stop word removal"],
+            "progression_level": 10
+        },
+        {
+            "id": 63,
+            "term": "Word Embeddings",
+            "definition": "Dense vector representations of words that capture semantic relationships",
+            "wrong_answers": ["Bag of words", "TF-IDF", "One-hot encoding"],
+            "progression_level": 10
+        },
+        {
+            "id": 64,
+            "term": "Attention Mechanism",
+            "definition": "Method allowing models to focus on relevant parts of input sequence",
+            "wrong_answers": ["Convolution", "Pooling", "Dropout"],
+            "progression_level": 10
+        },
+        {
+            "id": 65,
+            "term": "Transformer",
+            "definition": "Architecture using self-attention mechanisms for sequence-to-sequence tasks",
+            "wrong_answers": ["LSTM", "GRU", "CNN"],
+            "progression_level": 10
+        },
+        {
+            "id": 66,
+            "term": "Entropy",
+            "definition": "Measure of information content or uncertainty in a probability distribution",
+            "wrong_answers": ["Cross-entropy", "KL divergence", "Mutual information"],
+            "progression_level": 8
+        },
+        {
+            "id": 67,
+            "term": "Gini Index",
+            "definition": "Measure of impurity used in decision trees: 1 - Σ(pi²)",
+            "wrong_answers": ["Entropy", "Information gain", "Chi-square"],
+            "progression_level": 8
+        },
+        {
+            "id": 68,
+            "term": "Bootstrap",
+            "definition": "Resampling method that samples with replacement to estimate sampling distributions",
+            "wrong_answers": ["Jackknife", "Cross-validation", "Permutation test"],
+            "progression_level": 7
+        },
+        {
+            "id": 69,
+            "term": "Maximum Likelihood",
+            "definition": "Method of parameter estimation that maximizes likelihood of observed data",
+            "wrong_answers": ["Method of moments", "Bayesian estimation", "Least squares"],
+            "progression_level": 8
+        },
+        {
+            "id": 70,
+            "term": "ANOVA",
+            "definition": "Analysis of Variance - tests whether group means are significantly different",
+            "wrong_answers": ["t-test", "Chi-square test", "Correlation test"],
+            "progression_level": 3
+        },
+        {
+            "id": 71,
+            "term": "Chi-square Test",
+            "definition": "Tests independence between categorical variables using contingency tables",
+            "wrong_answers": ["t-test", "ANOVA", "Mann-Whitney test"],
+            "progression_level": 3
+        },
+        {
+            "id": 72,
+            "term": "A/B Testing",
+            "definition": "Experimental method comparing two versions to determine which performs better",
+            "wrong_answers": ["Multivariate testing", "Observational study", "Case study"],
+            "progression_level": 2
+        },
+        {
+            "id": 73,
+            "term": "Selection Bias",
+            "definition": "Systematic error from non-representative sample selection",
+            "wrong_answers": ["Confirmation bias", "Sampling bias", "Response bias"],
+            "progression_level": 3
+        },
+        {
+            "id": 74,
+            "term": "Correlation",
+            "definition": "Statistical measure of linear relationship strength between two variables",
+            "wrong_answers": ["Causation", "Covariance", "Regression"],
+            "progression_level": 2
+        },
+        {
+            "id": 75,
+            "term": "Causation",
+            "definition": "Relationship where one variable directly influences another",
+            "wrong_answers": ["Correlation", "Association", "Dependence"],
+            "progression_level": 4
+        },
+        {
+            "id": 76,
+            "term": "Randomization",
+            "definition": "Random assignment of subjects to treatment groups to reduce bias",
+            "wrong_answers": ["Stratification", "Matching", "Blocking"],
+            "progression_level": 3
+        },
+        {
+            "id": 77,
+            "term": "SQL",
+            "definition": "Structured Query Language for managing and querying relational databases",
+            "wrong_answers": ["NoSQL", "MongoDB", "Redis"],
+            "progression_level": 1
+        },
+        {
+            "id": 78,
+            "term": "JOIN",
+            "definition": "SQL operation that combines rows from multiple tables based on related columns",
+            "wrong_answers": ["UNION", "GROUP BY", "WHERE"],
+            "progression_level": 1
+        },
+        {
+            "id": 79,
+            "term": "GROUP BY",
+            "definition": "SQL clause that groups rows sharing values in specified columns",
+            "wrong_answers": ["ORDER BY", "WHERE", "HAVING"],
+            "progression_level": 2
+        },
+        {
+            "id": 80,
+            "term": "Data Cleaning",
+            "definition": "Process of identifying and correcting errors, inconsistencies, and missing values",
+            "wrong_answers": ["Data mining", "Data analysis", "Data visualization"],
+            "progression_level": 1
+        },
+        {
+            "id": 81,
+            "term": "Outlier",
+            "definition": "Data point that differs significantly from other observations",
+            "wrong_answers": ["Inlier", "Missing value", "Duplicate"],
+            "progression_level": 1
+        },
+        {
+            "id": 82,
+            "term": "Normalization",
+            "definition": "Scaling features to have values between 0 and 1",
+            "wrong_answers": ["Standardization", "Regularization", "Transformation"],
+            "progression_level": 1
+        },
+        {
+            "id": 83,
+            "term": "Standardization",
+            "definition": "Scaling features to have zero mean and unit variance: (X - μ) / σ",
+            "wrong_answers": ["Normalization", "Regularization", "Discretization"],
+            "progression_level": 1
+        },
+        {
+            "id": 84,
+            "term": "Imputation",
+            "definition": "Process of replacing missing values with substituted estimates",
+            "wrong_answers": ["Interpolation", "Extrapolation", "Transformation"],
+            "progression_level": 1
+        },
+        {
+            "id": 85,
+            "term": "ETL",
+            "definition": "Extract, Transform, Load - process of moving data from source to destination",
+            "wrong_answers": ["ELT", "Data pipeline", "Data warehouse"],
+            "progression_level": 1
+        },
+        {
+            "id": 86,
+            "term": "API",
+            "definition": "Application Programming Interface - set of protocols for building software applications",
+            "wrong_answers": ["SDK", "Library", "Framework"],
+            "progression_level": 1
+        },
+        {
+            "id": 87,
+            "term": "Big Data",
+            "definition": "Datasets too large or complex for traditional data processing applications",
+            "wrong_answers": ["Small data", "Meta data", "Structured data"],
+            "progression_level": 1
+        },
+        {
+            "id": 88,
+            "term": "Data Warehouse",
+            "definition": "Central repository storing integrated data from multiple sources for analysis",
+            "wrong_answers": ["Data lake", "Database", "Data mart"],
+            "progression_level": 1
+        },
+        {
+            "id": 89,
+            "term": "Data Lake",
+            "definition": "Storage repository holding vast amounts of raw data in native format",
+            "wrong_answers": ["Data warehouse", "Database", "Data mart"],
+            "progression_level": 1
+        },
+        {
+            "id": 90,
+            "term": "ROC Curve",
+            "definition": "Plot of true positive rate vs false positive rate for binary classifiers",
+            "wrong_answers": ["PR curve", "Learning curve", "Validation curve"],
+            "progression_level": 1
+        },
+        {
+            "id": 91,
+            "term": "AUC",
+            "definition": "Area Under the Curve - metric evaluating overall quality of binary classifier",
+            "wrong_answers": ["Accuracy", "F1-score", "Log-loss"],
+            "progression_level": 1
+        },
+        {
+            "id": 92,
+            "term": "Feature Selection",
+            "definition": "Process of selecting subset of relevant features for model building",
+            "wrong_answers": ["Feature engineering", "Dimensionality reduction", "Feature extraction"],
+            "progression_level": 1
+        },
+        {
+            "id": 93,
+            "term": "Ensemble Learning",
+            "definition": "Combining multiple models to create stronger predictor than individual models",
+            "wrong_answers": ["Single model", "Transfer learning", "Meta-learning"],
+            "progression_level": 2
+        },
+        {
+            "id": 94,
+            "term": "Hyperparameter",
+            "definition": "Configuration setting external to model that controls learning process",
+            "wrong_answers": ["Parameter", "Weight", "Bias"],
+            "progression_level": 1
+        },
+        {
+            "id": 95,
+            "term": "Grid Search",
+            "definition": "Hyperparameter tuning method testing all combinations in specified parameter grid",
+            "wrong_answers": ["Random search", "Bayesian optimization", "Gradient descent"],
+            "progression_level": 1
+        }
+    ]
+}

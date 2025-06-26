@@ -1,0 +1,353 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Flashcard Reader Development Rules
+
+## Core Development Principles
+
+### 1. TEST FIRST - NO EXCEPTIONS
+- **NEVER** claim anything is "complete" or "working" without actual testing
+- **ALWAYS** test each feature immediately after implementation
+- **ALWAYS** run visual tests before moving to next phase
+- **ALWAYS** verify in browser before proceeding
+- Use `make serve` and test in browser at each step
+
+### 2. Mobile-First Progressive Enhancement
+- **ALWAYS** implement mobile experience first
+- **ALWAYS** test touch controls before keyboard controls
+- **ALWAYS** verify responsive design at 320px, 768px, 1024px+ breakpoints
+- **ALWAYS** test on actual mobile devices when possible
+- **ALWAYS** ensure 44px+ touch targets for mobile usability
+
+### 3. AUTOMATIC GIT OPERATIONS - MANDATORY
+- **ALWAYS** commit and push changes after completing any work
+- **NEVER** end a session without committing progress
+- **ALWAYS** use descriptive commit messages with:
+  - Summary of changes made
+  - Features added or bugs fixed
+  - Impact on functionality
+  - Live demo link if applicable
+- **ALWAYS** run: `git add -A && git commit -m "descriptive message" && git push origin main`
+- **IMMEDIATE DEPLOYMENT**: Changes auto-deploy to GitHub Pages at https://wabbazzar.github.io/cards/
+
+### 4. Dynamic Deck Discovery Requirements
+- **MUST** scan assets/ directory for *_cards.json files automatically
+- **MUST** validate deck metadata structure before loading
+- **MUST** handle missing/corrupted deck files gracefully
+- **MUST** update deck selection dropdown dynamically
+- **MUST** support multiple deck files simultaneously
+- **Level Count**: Based on deck's available_levels and max_level metadata
+- **Card Selection**: Random selection from current progression level cards
+- **Level Progression**: All cards in current level must be mastered to advance
+
+### 5. Card Learning System Implementation
+- **MUST** implement 3-state card learning system:
+  - New cards: First time seeing, one correct answer = learned
+  - Struggling cards: Failed once, need 2 consecutive correct = learned
+  - Learned cards: Permanently removed from rotation
+- **MUST** track card states and consecutive correct counts
+- **MUST** remove mastered cards from selection pool
+- **MUST** advance to next progression level when current level complete
+
+### 6. Flashcard Interaction Requirements
+- **Question Format**: Display card definition as question prompt
+- **Answer Format**: Card term is correct answer among wrong_answers
+- **Answer Layout**: 2x2 grid separated by cross/plus dividers (NO card shapes)
+- **Lives System**: Start 5, lose 1 on wrong answer or timeout, gain 1 per 1000 points, max 10
+- **Scoring**: +100 per correct answer, speed bonus if timer enabled
+- **Timer Options**: None, 5s, 10s, 20s with visual countdown effects
+
+### 7. Visual Design - Tron Aesthetic
+- **Color Palette**: Cyan (#00ffff), electric blue, dark backgrounds
+- **Effects**: Glowing outlines, neon borders, cross/plus grid dividers
+- **Typography**: Futuristic monospace (Orbitron preferred)
+- **Animations**: Smooth 60 FPS, proper CSS keyframes
+- **Answer Grid**: Minimalist cross-grid layout maximizing text space
+- **Timer Effects**: Border countdown (bright→dim), answer blinking, failing neon effects
+
+### 8. Data Integration Rules
+- **MUST** auto-discover all *_cards.json files in assets/ directory
+- **MUST** use card definition as question prompt
+- **MUST** use card term as correct answer
+- **MUST** use provided wrong_answers array for incorrect options
+- **MUST** validate deck metadata structure on load
+- **MUST** filter cards by progression_level based on current level
+
+### 9. Timer System Requirements
+- **Visual Timer**: Question header border glows bright and dims as countdown progresses
+- **Answer Blinking**: Options blink sporadically at 50% time remaining
+- **Critical State**: Rapid flashing like failing neon sign in last 2 seconds
+- **Timeout Sequence**: Fade to black → show correct answer → select new random question
+- **Timer Options**: Selectable at start screen (None, 5s, 10s, 20s)
+
+### 10. PWA Implementation Requirements
+- **MUST** include web app manifest with Tron theme colors
+- **MUST** implement service worker for offline functionality
+- **MUST** cache deck files for offline use
+- **MUST** provide app installation capability
+- **MUST** work as standalone app on mobile devices
+
+## Git Workflow - MANDATORY FOR ALL CHANGES
+
+### Automatic Commit Protocol
+After ANY code changes, file creation, or bug fixes:
+
+1. **Stage all changes**: `git add -A`
+2. **Commit with descriptive message**: `git commit -m "Clear description of changes"`
+3. **Push to deploy**: `git push origin main`
+4. **Verify deployment**: Check https://wabbazzar.github.io/cards/ (deploys in 2-3 minutes)
+
+### Commit Message Format
+```
+Brief summary of changes
+
+- Specific feature added/bug fixed
+- Impact on learning functionality  
+- Test results or verification
+- Performance improvements
+- Mobile compatibility changes
+
+Live demo: https://wabbazzar.github.io/cards/
+```
+
+### Examples of Good Commit Messages
+```bash
+git commit -m "Implement dynamic deck discovery system
+
+- Add automatic scanning of assets/ directory for *_cards.json files
+- Create deck validation with graceful error handling
+- Populate deck selection dropdown dynamically
+- Test with multiple deck files in assets/
+- All deck discovery tests passing
+
+Live demo: https://wabbazzar.github.io/cards/"
+```
+
+```bash
+git commit -m "Add timer system with Tron visual effects
+
+- Implement question header border countdown (bright→dim)
+- Add answer blinking at 50% time remaining
+- Create failing neon sign effect for critical state
+- Add timeout sequence with correct answer reveal
+- Test all timer options (none, 5s, 10s, 20s)
+
+Live demo: https://wabbazzar.github.io/cards/"
+```
+
+## Testing Protocol
+
+### Phase Testing Checklist
+Before claiming any phase complete, **MUST** verify:
+
+1. **Visual Test**: Open in browser, verify appearance
+2. **Functional Test**: Test all interactions work correctly
+3. **Mobile Test**: Test touch controls on mobile viewport
+4. **Deck Test**: Verify dynamic deck loading works
+5. **Performance Test**: Verify 60 FPS smooth operation
+6. **Cross-browser Test**: Test in multiple browsers
+7. **Git Commit**: Commit and push all changes immediately
+
+### Debugging Protocol
+When issues occur:
+1. **Check browser console** for JavaScript errors
+2. **Verify DOM elements** exist with correct IDs
+3. **Test deck discovery** with various .json files
+4. **Verify event listeners** are properly attached
+5. **Check responsive design** at different screen sizes
+6. **Test timer visual effects** timing and sequence
+7. **Commit working fixes immediately**
+
+### Server Management
+- **Port conflicts**: Kill existing servers before starting new ones
+- **Cache issues**: Use cache-busting headers and hard refresh
+- **Asset loading**: Verify all deck files load without 404 errors
+
+## Implementation Phases
+
+### Phase 0: Mobile-First Foundation
+- [ ] Makefile with cross-platform commands
+- [ ] Mobile-first HTML structure with viewport meta
+- [ ] Visual test harness working (mobile + desktop)
+- [ ] Tron CSS framework with cross-grid layout
+- [ ] Server running without errors
+- [ ] **Git repository configured and changes committed**
+
+### Phase 1: Core Flashcard Experience
+- [ ] Touch-responsive 2x2 answer grid with cross dividers
+- [ ] Dynamic deck discovery from assets/ directory
+- [ ] Question display (definition) and answer selection (term)
+- [ ] Unified input handling (touch/mouse/keyboard)
+- [ ] Basic scoring and lives system
+- [ ] **All core features committed and pushed**
+
+### Phase 2: Timer System & Visual Effects
+- [ ] Timer border countdown effects (bright→dim)
+- [ ] Answer blinking at 50% time remaining
+- [ ] Critical state rapid flashing (failing neon)
+- [ ] Timeout sequence with correct answer reveal
+- [ ] All timer options working (none, 5s, 10s, 20s)
+- [ ] **Timer system tested and committed**
+
+### Phase 3: Progressive Learning Engine
+- [ ] 3-state card learning system (new→struggling→learned)
+- [ ] Consecutive correct tracking for struggling cards
+- [ ] Card removal from rotation when mastered
+- [ ] Level progression when all cards learned
+- [ ] Session analytics and statistics tracking
+- [ ] **Learning system verified and committed**
+
+### Phase 4: Desktop Enhancement
+- [ ] Keyboard shortcuts (1,2,3,4 for answers)
+- [ ] Mouse hover effects and desktop optimizations
+- [ ] Enhanced desktop layout and visual effects
+- [ ] Cross-platform input verification
+- [ ] Responsive scaling across all breakpoints
+- [ ] **Desktop enhancements tested and committed**
+
+### Phase 5: PWA & Polish Features
+- [ ] Web app manifest with Tron theme
+- [ ] Service worker for offline functionality
+- [ ] App installation capability
+- [ ] Performance optimization (60 FPS mobile)
+- [ ] Comprehensive error handling
+- [ ] **PWA features complete and committed**
+
+### Phase 6: Visual Polish & UX
+- [ ] Level completion animations
+- [ ] End game screens (game over + victory)
+- [ ] Comprehensive session statistics
+- [ ] Cross-platform visual consistency
+- [ ] All animations smooth and responsive
+- [ ] **Visual polish complete and committed**
+
+### Phase 7: Cross-Platform Testing
+- [ ] Mobile browser testing (iOS Safari, Chrome)
+- [ ] Desktop browser testing (Chrome, Firefox, Safari)
+- [ ] Touch vs mouse vs keyboard input verification
+- [ ] Performance validation across devices
+- [ ] Accessibility compliance testing
+- [ ] **Cross-platform compatibility verified and committed**
+
+## Critical Success Criteria
+
+### Flashcard Learning Must Work
+- [ ] Dynamic deck discovery from assets/ directory
+- [ ] Touch-friendly 2x2 answer grid with cross dividers
+- [ ] Timer system with all visual effects working
+- [ ] Card learning states progress correctly
+- [ ] Level advancement when all cards mastered
+- [ ] Session statistics track accurately
+- [ ] Lives and scoring system function properly
+
+### Visual Quality Standards
+- [ ] Tron aesthetic consistent throughout
+- [ ] Cross-grid layout clean and minimalist
+- [ ] Timer border effects smooth and accurate
+- [ ] Answer blinking and critical state effects work
+- [ ] Responsive design works 320px to 1920px+
+- [ ] 60 FPS performance maintained on mobile
+
+### Cross-Platform Excellence
+- [ ] Works on mobile browsers (iOS Safari, Android Chrome)
+- [ ] Works on desktop browsers (Chrome, Firefox, Safari)
+- [ ] Touch controls responsive and accurate
+- [ ] Keyboard shortcuts functional
+- [ ] Mouse interactions smooth
+- [ ] PWA installation works on mobile
+
+### Technical Requirements
+- [ ] **All changes committed to git with descriptive messages**
+- [ ] **Live demo deployed and accessible at GitHub Pages**
+- [ ] **No uncommitted changes in working directory**
+- [ ] **Comprehensive error handling for all edge cases**
+- [ ] **Session persistence across page refreshes**
+- [ ] **Offline functionality after first load**
+
+## Error Prevention Rules
+
+### Before Any Code Changes
+1. **Test current state** - verify what's working/broken
+2. **Make minimal changes** - one feature at a time
+3. **Test immediately** - verify change works
+4. **Commit immediately** - save working progress
+5. **Fix before proceeding** - don't accumulate bugs
+
+### Before Claiming Completion
+1. **Full learning session test** - play through multiple levels
+2. **Deck discovery test** - verify multiple .json files work
+3. **Cross-device test** - verify mobile and desktop
+4. **Performance test** - ensure 60 FPS maintained
+5. **Visual test** - verify Tron aesthetic consistent
+6. **Timer test** - verify all timer options and effects work
+7. **Git status clean** - all changes committed and pushed
+8. **Live demo verified** - test deployed version
+
+### Common Pitfalls to Avoid
+- **DOM element IDs** - ensure they match between HTML and JavaScript
+- **Event listeners** - verify they're attached after DOM ready
+- **Deck loading** - handle async operations and loading states
+- **Timer precision** - use exact timing, test visual effects
+- **Mobile viewport** - test actual mobile devices, not just browser dev tools
+- **Cross-grid layout** - ensure dividers render cleanly without overlap
+- **Uncommitted changes** - NEVER leave work uncommitted
+
+## Definition of Done
+
+A feature is **NOT DONE** until:
+1. **Visually tested** in browser on mobile and desktop
+2. **Functionally verified** through user interaction
+3. **Deck discovery working** if applicable
+4. **Cross-platform compatible** (mobile + desktop)
+5. **Performance optimized** (60 FPS maintained)
+6. **Visually polished** (Tron aesthetic consistent)
+7. **Error-free** (no console errors)
+8. **Responsive** (works at all screen sizes)
+9. **PWA ready** (offline functionality working)
+10. **COMMITTED AND PUSHED** to git repository
+11. **DEPLOYED** and verified on live demo
+
+**NEVER** claim completion without completing ALL criteria above.
+
+## Emergency Debugging Checklist
+
+When things break:
+1. **Check browser console** - look for JavaScript errors
+2. **Verify server running** - check terminal for errors
+3. **Clear browser cache** - hard refresh (Cmd+Shift+R)
+4. **Check DOM structure** - verify elements exist
+5. **Test deck loading** - verify .json files accessible
+6. **Check timer system** - verify visual effects timing
+7. **Test touch events** - verify mobile input working
+8. **Check cross-grid layout** - verify dividers render correctly
+9. **Commit working fixes immediately** - save progress
+10. **Revert if necessary** - go back to last working state
+
+## Session End Protocol
+
+Before ending any development session:
+1. **Run final tests** - ensure everything works
+2. **Check git status** - verify no uncommitted changes
+3. **Push final commit** - deploy latest version
+4. **Verify live demo** - test deployed version
+5. **Update documentation** - if new features added
+
+## Makefile Commands Reference
+
+```makefile
+serve:          # Start development server (mobile-ready)
+mobile-test:    # Test mobile experience
+desktop-test:   # Test desktop enhancements  
+deck-test:      # Test deck discovery system
+timer-test:     # Test timer visual effects
+performance-test: # Verify 60 FPS performance
+auto-test:      # Run automated test suite
+clean-cache:    # Clear browser cache instructions
+```
+
+Remember: **WORKING CODE > PERFECT CODE**
+Get it working first, commit it, then optimize and polish.
+Mobile experience first, desktop enhancement second.
+Test every change immediately, commit all progress.
