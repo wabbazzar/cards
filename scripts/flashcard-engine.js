@@ -103,26 +103,36 @@ class FlashcardEngine {
         
         // Answer Selection - Unified Input Handling
         this.answerButtons.forEach((button, index) => {
-            // Touch/Mouse Events
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.selectAnswer(index);
-            });
+            let touchStarted = false;
             
-            // Touch Feedback
+            // Touch Events (Mobile)
             button.addEventListener('touchstart', (e) => {
                 e.preventDefault();
+                touchStarted = true;
                 button.classList.add('touch-feedback');
             });
             
             button.addEventListener('touchend', (e) => {
                 e.preventDefault();
                 button.classList.remove('touch-feedback');
+                if (touchStarted) {
+                    touchStarted = false;
+                    this.selectAnswer(index);
+                }
             });
             
             button.addEventListener('touchcancel', (e) => {
                 e.preventDefault();
+                touchStarted = false;
                 button.classList.remove('touch-feedback');
+            });
+            
+            // Mouse Events (Desktop) - only if no touch
+            button.addEventListener('click', (e) => {
+                if (!touchStarted) {
+                    e.preventDefault();
+                    this.selectAnswer(index);
+                }
             });
         });
 
@@ -149,15 +159,22 @@ class FlashcardEngine {
 
     async discoverDecks() {
         try {
-            // Discover all *_cards.json files in assets/ directory
-            const deckFiles = [
-                'data_science_cards.json'
-                // Add more deck files as they're created
+            // Dynamic discovery: Try to load directory listing or common deck files
+            const potentialDecks = [
+                'data_science_cards.json',
+                'data_science_advanced_cards.json', 
+                'chinese_language_cards.json',
+                'math_cards.json',
+                'history_cards.json',
+                'science_cards.json',
+                'programming_cards.json',
+                'vocabulary_cards.json'
             ];
 
             const deckOptions = [];
             
-            for (const filename of deckFiles) {
+            // Try each potential deck file
+            for (const filename of potentialDecks) {
                 try {
                     const response = await fetch(`assets/${filename}`);
                     if (response.ok) {
@@ -171,8 +188,42 @@ class FlashcardEngine {
                         }
                     }
                 } catch (error) {
-                    console.warn(`Failed to load deck ${filename}:`, error);
+                    // Silently skip missing files - this is expected
+                    console.debug(`Deck ${filename} not found - skipping`);
                 }
+            }
+
+            // Also try a more generic approach - scan for any *cards.json pattern
+            try {
+                // This approach tries common naming patterns
+                const commonPatterns = [
+                    'biology_cards.json', 'chemistry_cards.json', 'physics_cards.json',
+                    'english_cards.json', 'spanish_cards.json', 'french_cards.json',
+                    'javascript_cards.json', 'python_cards.json', 'react_cards.json'
+                ];
+                
+                for (const pattern of commonPatterns) {
+                    try {
+                        const response = await fetch(`assets/${pattern}`);
+                        if (response.ok) {
+                            const deck = await response.json();
+                            if (this.validateDeckStructure(deck)) {
+                                // Check if we already have this deck
+                                if (!deckOptions.find(d => d.filename === pattern)) {
+                                    deckOptions.push({
+                                        filename: pattern,
+                                        metadata: deck.metadata,
+                                        deck: deck
+                                    });
+                                }
+                            }
+                        }
+                    } catch (error) {
+                        console.debug(`Pattern ${pattern} not found - skipping`);
+                    }
+                }
+            } catch (error) {
+                console.debug('Pattern scanning completed');
             }
 
             this.populateDeckDropdown(deckOptions);
