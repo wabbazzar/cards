@@ -410,6 +410,17 @@ class FlashcardEngine {
     updateTimerEffects() {
         const percentage = this.timeRemaining / this.timerDuration;
         
+        // Dynamic border thickness based on time remaining
+        const borderIntensity = Math.max(0.2, percentage);
+        const glowIntensity = Math.floor(borderIntensity * 50);
+        
+        // Apply dynamic border glow that dims as time runs out
+        this.elements.questionCard.style.boxShadow = `
+            0 0 ${glowIntensity}px var(--cyan), 
+            0 0 ${glowIntensity * 2}px var(--cyan), 
+            inset 0 0 ${glowIntensity * 0.3}px rgba(0, 255, 255, ${borderIntensity * 0.2})
+        `;
+        
         // Timer border effects
         if (percentage <= 0.2) {
             this.elements.questionCard.classList.add('timer-critical');
@@ -422,6 +433,10 @@ class FlashcardEngine {
             this.answerButtons.forEach(button => {
                 button.classList.add('timer-blink');
             });
+        } else {
+            // Maintain timer-active class for the full glow effect
+            this.elements.questionCard.classList.add('timer-active');
+            this.elements.questionCard.classList.remove('timer-warning', 'timer-critical');
         }
     }
 
@@ -462,6 +477,10 @@ class FlashcardEngine {
             this.timerInterval = null;
         }
         this.elements.questionCard.classList.remove('timer-active', 'timer-warning', 'timer-critical');
+        
+        // Reset to default border style
+        this.elements.questionCard.style.boxShadow = '';
+        
         this.answerButtons.forEach(button => {
             button.classList.remove('timer-blink');
         });
